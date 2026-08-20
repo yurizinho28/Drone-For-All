@@ -2,7 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Inter", sans-serif;
     text-decoration: none;
+    list-style: none;
 }
 
+--root{
+    --primaria: hsl(210,29%, 6%); /* Cor de fundo principal */
+    --destque: hsl(200,100%, 50%); /* Cor primária/ botões / destaques */
+    --secundaria: hsl(195, 100%, 70%); /* Cor secundária / detalhes / ícones */
+    --texto-principais: hsl(216, 33%, 97%); /* Textos principais */
+    --texto-secundarios: hsl(216, 15%, 60%); /* Textos secundários / informações auxiliares */
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    background-color: aqua;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
