@@ -60,13 +60,18 @@ Projeto desenvolvido pelo **Grupo B do 2° MB** da **ETEC Alberto Santos Dumont*
 Este projeto utiliza das seguintes bibliotecas de terceiros:
 
  
-### 🎨 Icon-Icons
+### 🎨 Font Awesome
  
-> Copyright (c) 2014-2026 Icon-Icons
+> Copyright (c) 2022 Fonticons, Inc.
  
+- 🔗 Repositório: [https://github.com/FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 - 📄 Licença: **CC BY 4.0**.
-- 🔧 Alteração nos Ícones: .mudança nas cores.
+- 🔧 Alteração nos Ícones: Não houve.
 
+---
+ 
+> O **Font Awesome** está regido pela licença **CC BY 4.0**.
+ 
 ---
  
 ## 📄 Licença
