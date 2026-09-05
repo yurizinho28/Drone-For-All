@@ -215,20 +215,20 @@ main {
         -webkit-box-shadow: 0px 5px 20px 0px rgba(8,224,255,0.4); 
         box-shadow: 0px 5px 20px 0px rgba(8,224,255,0.4);
         transition: all 0.2s ease;
-
-        a {
-          color: var(--primaria);
-        }
-
-        
+        color: var(--primaria); 
       }
       
+      svg {
+        width: 20px;
+        height: 20px;
+        transform: translateY(10%);
+        margin-left: 0.05rem;
+        transition: all 0.2s ease;
+      }
+
       #scan-btn:hover {
         background-color: var(--primaria);
-        
-        a {
-          color: var(--texto-principal);
-        }
+        color: var(--texto-principal);
         
         svg {
           fill: var(--texto-principal);
@@ -252,10 +252,7 @@ main {
         cursor: pointer;
         overflow: hidden;
         transition: 0.2s ease;
-        
-        a {
-          color: var(--texto-secundario);
-        }
+        color: var(--texto-secundario);
       }
       
       #about-btn:hover {
@@ -283,12 +280,6 @@ main {
         animation: shimmer 5s ease-in-out infinite;
       }
       
-      svg {
-        width: 17px;
-        height: 17px;
-        transform: translate(-25%, 25%);
-        margin-left: 0.05rem;
-      }
     }
 
   }
