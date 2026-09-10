@@ -358,6 +358,12 @@ main {
       }
     }
   }
+
+  #objective {
+    display: flex;
+    justify-content: center;
+    
+  }
 }
 
 @keyframes shimmer {
