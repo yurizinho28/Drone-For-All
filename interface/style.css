@@ -8,7 +8,7 @@
 
 :root {
   --bg-primaria: hsl(213, 29%, 6%); /* Cor de fundo principal */
-  --bg-secundario: hsl(213, 29%, 10%); /* Cor de fundo secundária */
+  --bg-secundario: hsl(213, 21%, 8%); /* Cor de fundo secundária */
   --primaria: hsl(200, 100%, 50%); /* Cor primária/ botões / destaques */
   --secundaria: hsl(195, 100%, 70%); /* Cor secundária / detalhes / ícones */
   --texto-principal: hsl(216, 33%, 97%); /* Textos principais */
@@ -17,6 +17,7 @@
     15%,
     80%
   ); /* Textos secundários / informações auxiliares */
+  --card-bg: hsl(215, 21%, 11%)
 }
 
 body {
@@ -301,9 +302,12 @@ main {
     }
   }
 
-  #whatIs {
+  section {
     height: 100dvh;
-    background-color: #000;
+  }
+
+  #whatIs {
+    background: var(--bg-primaria);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -359,11 +363,185 @@ main {
     }
   }
 
+  
   #objective {
+    
+    #flex {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding-left: 30px;
+      gap: 100px;
+      background: var(--bg-secundario);
+  
+        #title {
+          width: 90vw;
+
+          p {
+            color: var(--secundaria);
+            font-family: "Inter", sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 10px rgba(102,217,255,0.9);
+            margin-bottom: 5px;
+          }
+
+          h1 {
+            font-family: "Exo 2", sans-serif;
+            font-size: 2.3rem;
+            color: var(--texto-principal);
+          }
+        }
+    
+        #cards {
+          display: flex;
+          flex-direction: row;
+          width: 90vw;
+          gap: 25px;
+
+          .card {
+            width: 50vw;
+            height: 30dvh;
+            border-left: 2px solid var(--fill);
+            border-radius: 10px;
+            background: var(--card-bg);
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px 20px;
+
+            h1 {
+              font-family: "Exo 2", sans-serif;
+              font-size: 1.9rem;
+              color: var(--texto-principal);
+            }
+
+            p {
+              font-family: "Inter", sans-serif;
+              font-size: 0.9rem;
+              color: var(--texto-secundario);
+            }
+            
+            svg {
+              width: 2rem;
+              height: 2rem;
+              fill: var(--fill);
+              
+            }
+          }
+        }
+    }
+  }
+
+  #aboutUs {
+    height: 100dvh;
+    background: var(--bg-primaria);
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    flex-direction: row;
+
+    #container {
+      width: 50vw;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        height: 100%;
+
+        .card {
+          max-width: 40vw;
+          max-height: 20dvh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 15px;
+          border-left: 2px solid transparent;
+          transition: all 0.2s ease;
+
+          h3 {
+            font-family: "Exo 2", sans-serif;
+            font-size: 1.2rem;
+            color: var(--texto-principal);
+            letter-spacing: 1px;
+          }
+
+          p {
+            font-family: "Inter", sans-serif;
+            font-size: 0.8rem;
+            color: var(--texto-secundario);
+            padding: 5px 0;
+
+          }
+        }
+
+        .card:hover {
+          border-color: var(--texto-principal);
+          transform: translateY(-2px);
+
+        }
+
+        .card:nth-child(1), .card:nth-child(3) {
+          width: 100%;
+          background: var(--card-bg);
+            
+        }
+
+        .card:nth-child(2) {
+          width: 100%;
+          height: 17dvh;
+          background: var(--card-bg);
+            
+        }
+      }
+    }
+
+    #content {
+      width: 50vw;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      
+      p {
+        font-family: "Inter", sans-serif;
+      }
+
+      p.label {
+        font-size: 0.8rem;
+        color: var(--texto-secundario);
+      }
+      
+      p#description {
+        width: 90%;
+        font-size: 1.1rem;
+        color: var(--texto-secundario);
+        letter-spacing: 0.6px;
+        line-height: 1.6;
+      }
+      
+        h1 {
+          font-family: "Exo 2", sans-serif;
+          font-size: 2.3rem;
+          color: var(--texto-principal);
+          margin: 5px 0 40px 0;
+        }
+    }
   }
+  
+
 }
 
 @keyframes shimmer {
