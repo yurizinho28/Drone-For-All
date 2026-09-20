@@ -533,39 +533,39 @@ main {
         flex-direction: column;
         justify-content: center;
         gap: 20px;
+        transform: translateY(5%);
 
         .card {
           width: 100%;
           height: 20dvh;
           background: var(--card-bg);
-          border-left: 2px solid var(--primaria);
           border-radius: 5px;
+          border-left: 2px solid transparent;
           padding: 10px;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+          transition: all 0.2s ease;
 
-          h1 {
+          .label {
             font-family: "Exo 2", sans-serif;
             font-size: 1.5rem;
             color: var(--texto-principal);
             letter-spacing: 0.05rem;
           }
 
-          p {
+          .text {
             font-family: "Inter", sans-serif;
             font-size: 0.9rem;
             color: var(--texto-secundario);
             letter-spacing: 0.05rem;
           }
         }
-      }
-  
-      .card {
-        height: 20dvh;
 
+        .card:hover {
+          border-color: var(--primaria);
+        }
       }
-
     }
 
 
