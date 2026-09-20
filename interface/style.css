@@ -527,18 +527,82 @@ main {
           border-radius: 5px;
         }
       }
-  
-      #card {
-        height: 70dvh;
 
+      #card-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        transform: translateY(5%);
+
+        .card {
+          width: 100%;
+          height: 20dvh;
+          background: var(--card-bg);
+          border-radius: 5px;
+          border-left: 2px solid transparent;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          transition: all 0.2s ease;
+
+          .label {
+            font-family: "Exo 2", sans-serif;
+            font-size: 1.5rem;
+            color: var(--texto-principal);
+            letter-spacing: 0.05rem;
+          }
+
+          .text {
+            font-family: "Inter", sans-serif;
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+            letter-spacing: 0.05rem;
+          }
+        }
+
+        .card:hover {
+          border-color: var(--primaria);
+        }
       }
-
     }
-
-
   }
-  
 
+  
+  
+}
+
+footer {
+  height: 25dvh;
+  background: #0B0B0B;
+  padding: 10px;
+
+  h3 {
+    color: var(--primaria);
+    font-size: 1.5rem;
+    font-family: "Exo 2", sans-serif;
+    margin: 10px;
+  }
+
+  p {
+    color: var(--texto-secundario);
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 5px;
+  }
+
+  p:not(#copyright) {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: var(--primaria);
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+  }
 }
 
 @keyframes shimmer {
