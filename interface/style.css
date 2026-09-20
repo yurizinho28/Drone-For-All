@@ -527,9 +527,42 @@ main {
           border-radius: 5px;
         }
       }
+
+      #card-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        .card {
+          width: 100%;
+          height: 20dvh;
+          background: var(--card-bg);
+          border-left: 2px solid var(--primaria);
+          border-radius: 5px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          h1 {
+            font-family: "Exo 2", sans-serif;
+            font-size: 1.5rem;
+            color: var(--texto-principal);
+            letter-spacing: 0.05rem;
+          }
+
+          p {
+            font-family: "Inter", sans-serif;
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+            letter-spacing: 0.05rem;
+          }
+        }
+      }
   
-      #card {
-        height: 70dvh;
+      .card {
+        height: 20dvh;
 
       }
 
