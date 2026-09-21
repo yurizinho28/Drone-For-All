@@ -76,6 +76,6 @@ Este projeto utiliza das seguintes bibliotecas de terceiros:
  
 ## 📄 Licença
  
-Este projeto está sob a licença (colocar licença). Consulte o arquivo [LICENSE](interface/LICENSE) para mais detalhes.
+Este projeto está sob a licença EULA. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
