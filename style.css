@@ -658,3 +658,414 @@ footer {
     transform: translate(100%) rotate(45deg);
   }
 }
+
+/* ================================================================
+   HAMBÚRGUER — oculto no desktop, visível no mobile
+   ================================================================ */
+
+#hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+#hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--primaria);
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+#hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ================================================================
+   TABLET — ≤ 1100px
+   ================================================================ */
+
+@media (max-width: 1100px) {
+
+  header {
+    padding: 0 25px;
+  }
+
+  header nav ul {
+    gap: 12px;
+  }
+
+  header nav ul li a {
+    font-size: 1rem;
+  }
+
+  main #hero {
+    grid-template: 1fr / 0.7fr 2fr;
+  }
+
+  main #hero #content h1 {
+    font-size: 1.6rem;
+  }
+
+  main #hero #content h1 span {
+    font-size: 3rem;
+  }
+
+  main #hero #buttons {
+    gap: 30px;
+  }
+
+  main #hero #buttons #scan-btn,
+  main #hero #buttons #about-btn {
+    width: 220px;
+  }
+
+  main #whatIs #items {
+    grid-template: 1fr / 1.5fr 1fr;
+  }
+
+  main #whatIs #items #text h1 {
+    font-size: 2rem;
+  }
+
+  main #whatIs #items #imgs #camera {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  main #objective #flex #cards .card h1 {
+    font-size: 1.5rem;
+  }
+
+  main #objective #flex #cards .card {
+    padding: 10px 15px;
+  }
+
+  main #monitoring #grid {
+    gap: 15px;
+  }
+}
+
+
+/* ================================================================
+   MOBILE — ≤ 768px
+   ================================================================ */
+
+@media (max-width: 768px) {
+
+  /* ── Header ──────────────────────────────────────────────────── */
+
+  header {
+    padding: 0 20px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Nav vira dropdown */
+  header nav {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 15, 20, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  header nav.open {
+    max-height: 300px;
+    padding: 20px 0;
+    border-color: rgba(0, 170, 255, 0.15);
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  header nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  #hamburger {
+    display: flex;
+  }
+
+  /* ── Hero ────────────────────────────────────────────────────── */
+
+  main #hero {
+    grid-template: 1fr / 1fr;
+  }
+
+  main #hero #threeD {
+    display: none;
+  }
+
+  main #hero #content-bg {
+    border-left: none;
+  }
+
+  main #hero #content h1 {
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+
+  main #hero #content h1 span {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  main #hero #content p {
+    font-size: 0.9rem;
+    width: 88%;
+  }
+
+  main #hero #buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transform: none;
+  }
+
+  main #hero #buttons #scan-btn,
+  main #hero #buttons #about-btn {
+    width: 75vw;
+    max-width: 300px;
+  }
+
+  /* ── Seções: altura flexível ─────────────────────────────────── */
+
+  main section {
+    height: auto;
+    min-height: 50dvh;
+  }
+
+  /* ── What Is ─────────────────────────────────────────────────── */
+
+  main #whatIs {
+    padding: 80px 20px 50px;
+    align-items: flex-start;
+  }
+
+  main #whatIs #items {
+    grid-template: auto auto / 1fr;
+    gap: 40px;
+  }
+
+  main #whatIs #items #text h1 {
+    font-size: 1.8rem;
+  }
+
+  main #whatIs #items #text p {
+    width: 100%;
+  }
+
+  main #whatIs #items #imgs {
+    display: flex;
+    justify-content: center;
+  }
+
+  main #whatIs #items #imgs #camera {
+    width: 65vw;
+    height: 65vw;
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  /* Ícone de check se reposiciona para não sair da tela */
+  main #whatIs #items #imgs #check-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  /* ── Objective ───────────────────────────────────────────────── */
+
+  main #objective #flex {
+    height: auto;
+    padding: 80px 20px 50px;
+    gap: 40px;
+  }
+
+  main #objective #flex #title h1 {
+    font-size: 1.8rem;
+  }
+
+  main #objective #flex #cards {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  main #objective #flex #cards .card {
+    width: 100%;
+    height: auto;
+    min-height: 130px;
+  }
+
+  /* ── About Us ────────────────────────────────────────────────── */
+
+  main #aboutUs {
+    flex-direction: column;
+    padding: 80px 20px 50px;
+    gap: 40px;
+  }
+
+  main #aboutUs #container {
+    width: 100%;
+    height: auto;
+  }
+
+  main #aboutUs #container #group {
+    height: auto;
+    gap: 20px;
+  }
+
+  main #aboutUs #container #group .card {
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+  }
+
+  main #aboutUs #container #group .card:nth-child(2) {
+    height: auto;
+    min-height: 80px;
+  }
+
+  main #aboutUs #content {
+    width: 100%;
+    height: auto;
+  }
+
+  main #aboutUs #content h1 {
+    font-size: 1.8rem;
+    margin: 5px 0 20px 0;
+  }
+
+  main #aboutUs #content p#description {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* ── Monitoring ──────────────────────────────────────────────── */
+
+  main #monitoring {
+    padding: 80px 20px 50px;
+    align-items: flex-start;
+  }
+
+  main #monitoring #grid {
+    width: 100%;
+    grid-template: auto auto / 1fr;
+    gap: 30px;
+  }
+
+  main #monitoring #grid #box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  main #monitoring #grid #card-box {
+    transform: none;
+  }
+
+  main #monitoring #grid #card-box .card {
+    height: auto;
+    min-height: 80px;
+    padding: 15px;
+  }
+
+  /* ── Banner de termos ────────────────────────────────────────── */
+
+  #termos[data-ativo="true"] {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 12px;
+    text-align: center;
+  }
+
+  #termos[data-ativo="true"] h2 {
+    font-size: 1rem;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────── */
+
+  footer {
+    height: auto;
+    padding: 20px;
+  }
+}
+
+
+/* ================================================================
+   MOBILE PEQUENO — ≤ 480px
+   ================================================================ */
+
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  main #hero #content h1 {
+    font-size: 1.1rem;
+  }
+
+  main #hero #content h1 span {
+    font-size: 2rem;
+  }
+
+  main #hero #content p {
+    font-size: 0.85rem;
+    width: 92%;
+  }
+
+  main #hero #buttons #scan-btn,
+  main #hero #buttons #about-btn {
+    width: 85vw;
+  }
+
+  main #whatIs #items #text h1 {
+    font-size: 1.5rem;
+  }
+
+  main #objective #flex #title h1 {
+    font-size: 1.5rem;
+  }
+
+  main #aboutUs #content h1 {
+    font-size: 1.5rem;
+  }
+
+  main #monitoring #grid #box h2 {
+    font-size: 1.1rem;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+}

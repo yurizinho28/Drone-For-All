@@ -2,6 +2,8 @@ const termos = document.getElementById("termos");
 const btnAceitar = document.getElementById("accept");
 const btnRecusar = document.getElementById("decline");
 const climaBtn = document.getElementById("clima");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector("header nav");
 
 window.addEventListener("DOMContentLoaded", () => {
     function isNewWindow() {
@@ -9,7 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     isNewWindow();
-        
 });
 
 btnAceitar.addEventListener("click", () => {
@@ -26,4 +27,19 @@ btnRecusar.addEventListener("click", () => {
 
 climaBtn.addEventListener("click", () => {
     alert("Aba de clima em desenvolvimento.");
-})
+});
+
+// ── Menu hambúrguer ─────────────────────────────────────────────
+hamburger.addEventListener("click", () => {
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", String(!expanded));
+    navMenu.classList.toggle("open");
+});
+
+// Fecha o menu ao clicar em qualquer link da nav
+document.querySelectorAll("header nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
+    });
+});
