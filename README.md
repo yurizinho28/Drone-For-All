@@ -84,3 +84,8 @@ Este projeto utiliza das seguintes bibliotecas de terceiros:
 Este projeto está sob a licença EULA. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+
+## ⭐ Agradecimentos especiais
+
+- A Lucas Lacerda Leite, criador dos Termos de Uso.
+- A Karina Lorençato Silva Lopes, auxiliadora da produção do design. 
